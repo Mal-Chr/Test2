@@ -1,3 +1,22 @@
+const imagesToPreload = [
+  "scene1.png",
+  "images/sky.jpg",
+  "scene4.png",
+  "images/city.png",
+  "images/night.png",
+  "images/room.png",
+  "images/flower.png",
+  "images/oneonly.png",
+  "images/txt1.png",
+  "images/txt2.png",
+  "images/txt3.png"
+];
+
+imagesToPreload.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
 /* =========================
    SCENES
 ========================= */
