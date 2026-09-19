@@ -1,20 +1,52 @@
 const imagesToPreload = [
-  "scene1.png",
-  "images/sky.jpg",
-  "scene4.png",
-  "images/city.png",
-  "images/night.png",
-  "images/room.png",
-  "images/flower.png",
-  "images/oneonly.png",
-  "images/txt1.png",
-  "images/txt2.png",
-  "images/txt3.png"
+    // SCENE BACKGROUNDS
+    "scene1.png",
+    "scene2.png",
+    "scene3.png",
+    "scene4.png",
+    "images/sky.jpg",
+    "images/city.jpg",
+    "images/night.jpg",
+    "images/room.jpg",
+    "images/flower.jpg",
+
+    // SCENE IMAGES
+    "oneonly.png",
+    "images/txt1.png",
+    "images/txt2.png",
+    "images/txt3.png",
+
+    // OUR STORY
+    "together1.jpeg",
+    "together2.jpeg",
+    "together3.jpeg",
+
+    // MEMORIES
+    "memory1.png",
+    "memory2.jpeg",
+    "memory3.jpeg",
+    "memory4.png",
+
+    // OTHER
+    "flower.png"
 ];
 
+const imageCache = {};
+
+function preloadImage(src) {
+    if (imageCache[src]) {
+        return imageCache[src];
+    }
+
+    const img = new Image();
+    img.src = src;
+
+    imageCache[src] = img;
+    return img;
+}
+
 imagesToPreload.forEach(src => {
-  const img = new Image();
-  img.src = src;
+    preloadImage(src);
 });
 
 /* =========================
