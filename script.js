@@ -38,13 +38,6 @@ const imagesToPreload = [
 ];
 
 
-const audioToPreload = [
-    "anythingyouwant.mp3",
-    "terlalutinggi.mp3",
-    "seasons.mp3"
-];
-
-
 const imageCache = {};
 
 
@@ -68,38 +61,6 @@ function preloadImage(src) {
 
 imagesToPreload.forEach(
     preloadImage
-);
-
-
-/* =========================
-   PRELOAD AUDIO
-========================= */
-
-const audioCache = {};
-
-
-function preloadAudio(src) {
-
-    if (audioCache[src]) {
-        return audioCache[src];
-    }
-
-
-    const audio =
-        document.createElement("audio");
-
-    audio.preload = "auto";
-    audio.src = src;
-
-    audioCache[src] = audio;
-
-    return audio;
-
-}
-
-
-audioToPreload.forEach(
-    preloadAudio
 );
 
 
