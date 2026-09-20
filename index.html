@@ -94,9 +94,7 @@
     <div id="fullscreenGate">
 
         <div id="fullscreenInstruction">
-
             Press [ E ]
-
         </div>
 
 
@@ -105,11 +103,179 @@
             id="enterFullscreen"
             disabled
         >
-
             ENTER FULLSCREEN
-
+            
         </button>
 
+        <div> <br> Pick ur song !</div>
+
+        <!-- SONG 1 -->
+
+        <div class="music-card">
+
+            <div class="music-title">
+                Reality Club - Anything You Want
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    class="music-play"
+                    data-song="0"
+                >
+                    ▶
+                </button>
+
+                <button
+                    class="music-pause"
+                    data-song="0"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                class="music-progress"
+                data-song="0"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <div class="music-time">
+
+                <span class="current-time">
+                    0:00
+                </span>
+
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio
+                class="audio"
+                data-song="0"
+                src="anythingyouwant.mp3"
+            ></audio>
+
+        </div>
+
+
+        <!-- SONG 2 -->
+
+        <div class="music-card music2">
+
+            <div class="music-title">
+                Juicy Luicy - Terlalu Tinggi
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    class="music-play"
+                    data-song="1"
+                >
+                    ▶
+                </button>
+
+                <button
+                    class="music-pause"
+                    data-song="1"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                class="music-progress"
+                data-song="1"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <div class="music-time">
+
+                <span class="current-time">
+                    0:00
+                </span>
+
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio
+                class="audio"
+                data-song="1"
+                src="terlalutinggi.mp3"
+            ></audio>
+
+        </div>
+
+
+        <!-- SONG 3 -->
+
+        <div class="music-card music3">
+
+            <div class="music-title">
+                wave to earth - seasons
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    class="music-play"
+                    data-song="2"
+                >
+                    ▶
+                </button>
+
+                <button
+                    class="music-pause"
+                    data-song="2"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                class="music-progress"
+                data-song="2"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <div class="music-time">
+
+                <span class="current-time">
+                    0:00
+                </span>
+
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio
+                class="audio"
+                data-song="2"
+                src="seasons.mp3"
+            ></audio>
+
+        </div>
+        
     </div>
 
 
@@ -155,6 +321,186 @@
         id="menuOverlay"
         class="menu-overlay"
     ></div>
+
+
+    <!-- =========================
+         MUSIC PLAYER
+         LEFT SIDE
+    ========================= -->
+
+    <div
+        id="musicPlayer"
+        class="music-player"
+    >
+
+        <!-- SONG 1 -->
+
+        <div class="music-card">
+
+            <div class="music-title">
+                Reality Club - Anything You Want
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    class="music-play"
+                    data-song="0"
+                >
+                    ▶
+                </button>
+
+                <button
+                    class="music-pause"
+                    data-song="0"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                class="music-progress"
+                data-song="0"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <div class="music-time">
+
+                <span class="current-time">
+                    0:00
+                </span>
+
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio
+                class="audio"
+                data-song="0"
+                src="anythingyouwant.mp3"
+            ></audio>
+
+        </div>
+
+
+        <!-- SONG 2 -->
+
+        <div class="music-card music2">
+
+            <div class="music-title">
+                Juicy Luicy - Terlalu Tinggi
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    class="music-play"
+                    data-song="1"
+                >
+                    ▶
+                </button>
+
+                <button
+                    class="music-pause"
+                    data-song="1"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                class="music-progress"
+                data-song="1"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <div class="music-time">
+
+                <span class="current-time">
+                    0:00
+                </span>
+
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio
+                class="audio"
+                data-song="1"
+                src="terlalutinggi.mp3"
+            ></audio>
+
+        </div>
+
+
+        <!-- SONG 3 -->
+
+        <div class="music-card music3">
+
+            <div class="music-title">
+                wave to earth - seasons
+            </div>
+
+            <div class="music-controls">
+
+                <button
+                    class="music-play"
+                    data-song="2"
+                >
+                    ▶
+                </button>
+
+                <button
+                    class="music-pause"
+                    data-song="2"
+                >
+                    ⏸
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                class="music-progress"
+                data-song="2"
+                value="0"
+                min="0"
+                max="100"
+            >
+
+            <div class="music-time">
+
+                <span class="current-time">
+                    0:00
+                </span>
+
+                <span class="duration">
+                    0:00
+                </span>
+
+            </div>
+
+            <audio
+                class="audio"
+                data-song="2"
+                src="seasons.mp3"
+            ></audio>
+
+        </div>
+
+    </div>
 
 
     <!-- =========================
