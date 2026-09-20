@@ -28,10 +28,10 @@ const imagesToPreload = [
     "memory4.png",
 
     // OTHER
-    "flower.png"
-    "terlalutinggi.mp3"
-    "seasons.mp3"
-    "anythingyouwant.mp3"
+    "flower.png",
+    "terlalutinggi.mp3",
+    "seasons.mp3",
+    "anythingyouwant.mp3",
 ];
 
 const imageCache = {};
