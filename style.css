@@ -578,7 +578,7 @@ button:hover {
 #burger-hint {
     position: fixed !important;
     top: 72px !important;
-    left: 30px !important;
+    left: 40px !important;
     right: auto !important;
 
     color: white;
@@ -591,8 +591,8 @@ button:hover {
     opacity: 0;
     animation:
         burgerHint
-        3.5s ease forwards;
-    animation-delay: 9.5s;
+        10.5s ease forwards;
+    animation-delay: 3.5s;
 }
 
 
@@ -1247,7 +1247,7 @@ button:hover {
 
     #burger-hint {
         top: 62px;
-        left: 30px;
+        left: 40px;
         right: auto;
         font-size: 10px;
     }
