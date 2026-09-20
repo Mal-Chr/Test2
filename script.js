@@ -1,4 +1,9 @@
+/* =========================================================
+   PRELOAD
+========================================================= */
+
 const imagesToPreload = [
+
     // SCENE BACKGROUNDS
     "scene1.png",
     "scene2.png",
@@ -28,26 +33,76 @@ const imagesToPreload = [
     "memory4.png",
 
     // OTHER
-    "flower.png",
+    "flower.png"
+
 ];
+
+
+const audioToPreload = [
+    "anythingyouwant.mp3",
+    "terlalutinggi.mp3",
+    "seasons.mp3"
+];
+
 
 const imageCache = {};
 
+
 function preloadImage(src) {
+
     if (imageCache[src]) {
         return imageCache[src];
     }
 
+
     const img = new Image();
+
     img.src = src;
 
     imageCache[src] = img;
+
     return img;
+
 }
 
-imagesToPreload.forEach(src => {
-    preloadImage(src);
-});
+
+imagesToPreload.forEach(
+    preloadImage
+);
+
+
+/* =========================
+   PRELOAD AUDIO
+========================= */
+
+const audioCache = {};
+
+
+function preloadAudio(src) {
+
+    if (audioCache[src]) {
+        return audioCache[src];
+    }
+
+
+    const audio =
+        document.createElement("audio");
+
+    audio.preload = "auto";
+    audio.src = src;
+
+    audioCache[src] = audio;
+
+    return audio;
+
+}
+
+
+audioToPreload.forEach(
+    preloadAudio
+);
+
+
 /* =========================
    SCENES
 ========================= */
@@ -218,9 +273,9 @@ const scenes = [
 let currentScene = 0;
 
 
-/* =========================
+/* =========================================================
    ELEMENTS
-========================= */
+========================================================= */
 
 const background =
     document.getElementById("background");
@@ -253,16 +308,16 @@ const thankYou =
     document.getElementById("thankYou");
 
 
-/* =========================
+/* =========================================================
    BACKGROUND
-========================= */
+========================================================= */
 
 let currentBackground = "";
 
 
-/* =========================
+/* =========================================================
    SHOW SCENE
-========================= */
+========================================================= */
 
 function showScene() {
 
@@ -334,9 +389,9 @@ function showScene() {
 }
 
 
-/* =========================
+/* =========================================================
    NEXT SCENE
-========================= */
+========================================================= */
 
 function nextScene() {
 
@@ -405,9 +460,9 @@ function nextScene() {
 }
 
 
-/* =========================
+/* =========================================================
    KEYBOARD
-========================= */
+========================================================= */
 
 document.addEventListener(
     "keydown",
@@ -444,9 +499,9 @@ document.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    OPEN FORM
-========================= */
+========================================================= */
 
 function openForm(
     formContent,
@@ -627,9 +682,9 @@ function showFlowers() {
 }
 
 
-/* =========================
+/* =========================================================
    YES
-========================= */
+========================================================= */
 
 yesBtn.addEventListener(
     "click",
@@ -641,50 +696,41 @@ yesBtn.addEventListener(
                 one last thing...
             </h2>
 
-
             <label>
                 what do you feel about us?
             </label>
-
 
             <textarea
                 id="yesAnswer1"
                 placeholder="tell me honestlyy yaa (justt use indoo)"
             ></textarea>
 
-
             <label>
                 what do you want us to become from now on?
             </label>
-
 
             <textarea
                 id="yesAnswer2"
                 placeholder="your answer..."
             ></textarea>
 
-
             <label>
                 is there anything you want me to know?
             </label>
-
 
             <textarea
                 id="yesAnswer3"
                 placeholder="anythingggg"
             ></textarea>
 
-
             <label>
                 do you have any question? whether its deep or random.
             </label>
-
 
             <textarea
                 id="yesAnswer4"
                 placeholder="askk me anything you wanttt, we'll talk about it together on WA :>"
             ></textarea>
-
 
             <button id="submitYes">
                 SUBMIT
@@ -787,9 +833,9 @@ ${answer4}
 );
 
 
-/* =========================
+/* =========================================================
    NOT YET
-========================= */
+========================================================= */
 
 notYetBtn.addEventListener(
     "click",
@@ -801,28 +847,23 @@ notYetBtn.addEventListener(
                 that's okay.
             </h2>
 
-
             <label>
                 what makes you feel like you're not ready yet?
             </label>
-
 
             <textarea
                 id="notYetAnswer1"
                 placeholder="you can be completely honest with meee (justt use indoo)"
             ></textarea>
 
-
             <label>
                 is there anything you need from me?
             </label>
-
 
             <textarea
                 id="notYetAnswer2"
                 placeholder="tell me..."
             ></textarea>
-
 
             <button id="submitNotYet">
                 SUBMIT
@@ -915,11 +956,9 @@ const menuPages = {
             Our Story
         </h2>
 
-
         <p class="menu-page-subtitle">
             little moments that brought us here.
         </p>
-
 
         <div class="story-item">
 
@@ -942,7 +981,6 @@ const menuPages = {
 
         </div>
 
-
         <div class="story-item">
 
             <div class="story-date">
@@ -963,7 +1001,6 @@ const menuPages = {
             </div>
 
         </div>
-
 
         <div class="story-item">
 
@@ -995,11 +1032,9 @@ const menuPages = {
             Little Things
         </h2>
 
-
         <p class="menu-page-subtitle">
             little things i notice about you.
         </p>
-
 
         <div class="little-item">
 
@@ -1026,7 +1061,6 @@ const menuPages = {
             </div>
 
         </div>
-
 
         <div class="little-item">
 
@@ -1059,11 +1093,9 @@ const menuPages = {
             Memories
         </h2>
 
-
         <p class="menu-page-subtitle">
             little things worth remembering.
         </p>
-
 
         <h4>
             BEGINNING OF OUR STORY
@@ -1078,7 +1110,6 @@ const menuPages = {
             First chats setelah confession itu, so so so so happyyyyyy than everrr
         </p>
 
-
         <h4>
             SPECIAL NAMES
         </h4>
@@ -1086,7 +1117,6 @@ const menuPages = {
         <p class="memory-caption">
             ♡ Akuu ingett banget pertama kali kamuu panggil aku "babe" SHSHHSSSJH ituu bikin akuu tergila-gila 😭. setelah ituu gantian aku panggil kamu "sayang" karenaa aku mikir kamu udaa nyaman sama panggilan panggilan spesial diantara kita berduaaa, and every time you said it, it still made me SUUPEERRRR smileeee
         </p>
-
 
         <h4>
             PHOTO OF YOU
@@ -1101,7 +1131,6 @@ const menuPages = {
             Pertama kalii kamuu kirim pap.. that makes me goes crazy and reddd. literallyy makess my day evenn evennnn better when you sendd it to meee (okay. u got me. i saved all those.)
         </p>
 
-
         <h4>
             PHOTO OF US
         </h4>
@@ -1114,7 +1143,6 @@ const menuPages = {
         <p class="memory-caption">
             WKWKWKWKWK YANGG INI DIPAKSAA MISSS KESAYANGAN KITAAA. guguppp bangett akuu, look how bad did i smileee 😭 (HAHAHHAA JEEREMIAH JARAKNYA JAUH BANGETT)
         </p>
-
 
         <h4>
             A GIFT
@@ -1138,11 +1166,9 @@ const menuPages = {
             A Few Words
         </h2>
 
-
         <p class="menu-page-subtitle">
             something i wanted you to know.
         </p>
-
 
         <p class="words-text">
 
@@ -1252,15 +1278,9 @@ const progressBars =
     );
 
 
-const musicCards =
-    document.querySelectorAll(
-        ".music-card"
-    );
-
-
-/* =========================
+/* =========================================================
    FORMAT TIME
-========================= */
+========================================================= */
 
 function formatTime(seconds) {
 
@@ -1296,9 +1316,9 @@ function formatTime(seconds) {
 }
 
 
-/* =========================
+/* =========================================================
    STOP ALL OTHER SONGS
-========================= */
+========================================================= */
 
 function stopOtherSongs(
     currentAudio
@@ -1322,9 +1342,9 @@ function stopOtherSongs(
 }
 
 
-/* =========================
+/* =========================================================
    PLAY
-========================= */
+========================================================= */
 
 playButtons.forEach(
     (button) => {
@@ -1348,7 +1368,15 @@ playButtons.forEach(
                 );
 
 
-                audio.play();
+                audio.play()
+                    .catch(
+                        error => {
+                            console.error(
+                                "AUDIO PLAY ERROR:",
+                                error
+                            );
+                        }
+                    );
 
             }
         );
@@ -1357,9 +1385,9 @@ playButtons.forEach(
 );
 
 
-/* =========================
+/* =========================================================
    PAUSE
-========================= */
+========================================================= */
 
 pauseButtons.forEach(
     (button) => {
@@ -1387,21 +1415,22 @@ pauseButtons.forEach(
 );
 
 
-/* =========================
+/* =========================================================
    AUDIO TIME UPDATE
-========================= */
+========================================================= */
 
 audioElements.forEach(
     (audio) => {
 
-        const index =
-            audio.dataset.song;
-
-
         const card =
-            document.querySelector(
-                `.music-card:nth-child(${Number(index) + 1})`
+            audio.closest(
+                ".music-card"
             );
+
+
+        if (!card) {
+            return;
+        }
 
 
         const progress =
@@ -1440,7 +1469,10 @@ audioElements.forEach(
             () => {
 
                 if (
-                    audio.duration
+                    Number.isFinite(
+                        audio.duration
+                    ) &&
+                    audio.duration > 0
                 ) {
 
                     progress.value =
@@ -1477,9 +1509,9 @@ audioElements.forEach(
 );
 
 
-/* =========================
+/* =========================================================
    PROGRESS BAR
-========================= */
+========================================================= */
 
 progressBars.forEach(
     (progress) => {
@@ -1499,7 +1531,10 @@ progressBars.forEach(
 
 
                 if (
-                    audio.duration
+                    Number.isFinite(
+                        audio.duration
+                    ) &&
+                    audio.duration > 0
                 ) {
 
                     audio.currentTime =
@@ -1518,9 +1553,9 @@ progressBars.forEach(
 );
 
 
-/* =========================
+/* =========================================================
    OPEN MENU
-========================= */
+========================================================= */
 
 function openMenu() {
 
@@ -1539,9 +1574,9 @@ function openMenu() {
 }
 
 
-/* =========================
+/* =========================================================
    CLOSE MENU
-========================= */
+========================================================= */
 
 function closeMenu() {
 
@@ -1560,9 +1595,9 @@ function closeMenu() {
 }
 
 
-/* =========================
+/* =========================================================
    OPEN MENU PAGE
-========================= */
+========================================================= */
 
 function openMenuPage(page) {
 
@@ -1572,17 +1607,13 @@ function openMenuPage(page) {
 
         closeMenu();
 
-
         currentScene = 0;
-
 
         formArea.classList.add(
             "hidden"
         );
 
-
         showScene();
-
 
         return;
 
@@ -1605,9 +1636,9 @@ function openMenuPage(page) {
 }
 
 
-/* =========================
+/* =========================================================
    BACK TO MENU
-========================= */
+========================================================= */
 
 function backToMenu() {
 
@@ -1623,9 +1654,9 @@ function backToMenu() {
 }
 
 
-/* =========================
+/* =========================================================
    MENU BUTTON
-========================= */
+========================================================= */
 
 menuButton.addEventListener(
     "click",
@@ -1633,9 +1664,9 @@ menuButton.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    CLOSE
-========================= */
+========================================================= */
 
 menuClose.addEventListener(
     "click",
@@ -1643,9 +1674,9 @@ menuClose.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    OVERLAY
-========================= */
+========================================================= */
 
 menuOverlay.addEventListener(
     "click",
@@ -1653,9 +1684,9 @@ menuOverlay.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    MENU ITEMS
-========================= */
+========================================================= */
 
 document
     .querySelectorAll(
@@ -1683,9 +1714,9 @@ document
     );
 
 
-/* =========================
+/* =========================================================
    BACK
-========================= */
+========================================================= */
 
 menuBack.addEventListener(
     "click",
@@ -1693,9 +1724,9 @@ menuBack.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    START
-========================= */
+========================================================= */
 
 showScene();
 
@@ -1709,10 +1740,12 @@ const fullscreenGate =
         "fullscreenGate"
     );
 
+
 const enterFullscreen =
     document.getElementById(
         "enterFullscreen"
     );
+
 
 const fullscreenInstruction =
     document.getElementById(
@@ -1723,9 +1756,9 @@ const fullscreenInstruction =
 let keyboardUnlocked = false;
 
 
-/* =========================
+/* =========================================================
    PRESS E
-========================= */
+========================================================= */
 
 document.addEventListener(
     "keydown",
@@ -1753,9 +1786,9 @@ document.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    ENTER FULLSCREEN
-========================= */
+========================================================= */
 
 enterFullscreen.addEventListener(
     "click",
@@ -1803,9 +1836,9 @@ enterFullscreen.addEventListener(
 );
 
 
-/* =========================
+/* =========================================================
    EXIT FULLSCREEN
-========================= */
+========================================================= */
 
 document.addEventListener(
     "fullscreenchange",
