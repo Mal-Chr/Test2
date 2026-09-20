@@ -552,6 +552,10 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
+#burger button {
+    font-style: normal;
+    text-decoration: none;
+}
 
 #burger:hover {
     background: transparent;
