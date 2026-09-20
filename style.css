@@ -538,22 +538,31 @@ button:hover {
     right: 30px;
     width: 45px;
     height: 45px;
+    padding: 0;
     border: none;
     background: transparent;
     color: white;
     font-size: 28px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 30002;
 
     opacity: 0;
-    animation: burgerAppear 1s ease forwards;
+    animation:
+        burgerAppear
+        1s ease forwards;
     animation-delay: 1s;
 
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease;
 }
 
+
 #burger:hover {
-    transform: scale(1.1);
+    background: transparent;
+    border: none;
+    color: white;
+    transform:
+        scale(1.1);
 }
 
 
@@ -571,10 +580,12 @@ button:hover {
     letter-spacing: 1px;
 
     pointer-events: none;
-    z-index: 999;
+    z-index: 30001;
 
     opacity: 0;
-    animation: burgerHint 3.5s ease forwards;
+    animation:
+        burgerHint
+        3.5s ease forwards;
     animation-delay: 1.5s;
 }
 
@@ -587,12 +598,14 @@ button:hover {
 
     0% {
         opacity: 0;
-        transform: translateY(-8px);
+        transform:
+            translateY(-8px);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform:
+            translateY(0);
     }
 
 }
@@ -602,25 +615,30 @@ button:hover {
 
     0% {
         opacity: 0;
-        transform: translateY(-5px);
+        transform:
+            translateY(-5px);
     }
 
     20% {
         opacity: 0.8;
-        transform: translateY(0);
+        transform:
+            translateY(0);
     }
 
     70% {
         opacity: 0.8;
-        transform: translateY(0);
+        transform:
+            translateY(0);
     }
 
     100% {
         opacity: 0;
-        transform: translateY(3px);
+        transform:
+            translateY(3px);
     }
 
 }
+
 
 /* =========================================================
    MENU OVERLAY
@@ -1213,11 +1231,17 @@ button:hover {
         font-size: 25px;
     }
 
-    .menu-button {
+    #burger {
         top: 18px;
-        left: 18px;
+        right: 18px;
         width: 40px;
         height: 40px;
+    }
+
+    #burger-hint {
+        top: 62px;
+        right: 16px;
+        font-size: 10px;
     }
 
     .side-menu {
