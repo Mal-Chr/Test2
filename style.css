@@ -567,10 +567,10 @@ button:hover {
 ========================= */
 
 #burger-hint {
-    position: fixed;
-    top: 72px;
-    left: 30px;
-    right: auto;
+    position: fixed !important;
+    top: 72px !important;
+    left: 30px !important;
+    right: auto !important;
 
     color: white;
     font-size: 12px;
