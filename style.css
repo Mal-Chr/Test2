@@ -569,7 +569,7 @@ button:hover {
 #burger-hint {
     position: fixed;
     top: 72px;
-    left: 28px;
+    left: 30px;
     right: auto;
 
     color: white;
@@ -583,7 +583,7 @@ button:hover {
     animation:
         burgerHint
         3.5s ease forwards;
-    animation-delay: 1.5s;
+    animation-delay: 9.5s;
 }
 
 
