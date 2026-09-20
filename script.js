@@ -1166,7 +1166,7 @@ const menuPages = {
 
 const menuButton =
     document.getElementById(
-        "menuButton"
+        "burger"
     );
 
 const menuClose =
@@ -1314,13 +1314,15 @@ playButtons.forEach(
             "click",
             () => {
 
-                const index =
-                    button.dataset.song;
+                const card =
+                    button.closest(
+                        ".music-card"
+                    );
 
 
                 const audio =
-                    document.querySelector(
-                        `.audio[data-song="${index}"]`
+                    card.querySelector(
+                        ".audio"
                     );
 
 
@@ -1332,10 +1334,12 @@ playButtons.forEach(
                 audio.play()
                     .catch(
                         error => {
+
                             console.error(
                                 "AUDIO PLAY ERROR:",
                                 error
                             );
+
                         }
                     );
 
@@ -1357,13 +1361,15 @@ pauseButtons.forEach(
             "click",
             () => {
 
-                const index =
-                    button.dataset.song;
+                const card =
+                    button.closest(
+                        ".music-card"
+                    );
 
 
                 const audio =
-                    document.querySelector(
-                        `.audio[data-song="${index}"]`
+                    card.querySelector(
+                        ".audio"
                     );
 
 
@@ -1481,13 +1487,15 @@ progressBars.forEach(
             "input",
             () => {
 
-                const index =
-                    progress.dataset.song;
+                const card =
+                    progress.closest(
+                        ".music-card"
+                    );
 
 
                 const audio =
-                    document.querySelector(
-                        `.audio[data-song="${index}"]`
+                    card.querySelector(
+                        ".audio"
                     );
 
 
