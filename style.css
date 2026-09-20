@@ -536,24 +536,20 @@ button:hover {
     position: fixed;
     top: 25px;
     left: 30px;
+    right: auto;
+
     width: 45px;
     height: 45px;
-    padding: 0;
     border: none;
     background: transparent;
     color: white;
     font-size: 28px;
     cursor: pointer;
-    z-index: 30002;
-
+    z-index: 1000;
     opacity: 0;
-    animation:
-        burgerAppear
-        1s ease forwards;
+    animation: burgerAppear 1s ease forwards;
     animation-delay: 1s;
-
-    transition:
-        transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 
