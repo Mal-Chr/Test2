@@ -29,9 +29,6 @@ const imagesToPreload = [
 
     // OTHER
     "flower.png",
-    "terlalutinggi.mp3",
-    "seasons.mp3",
-    "anythingyouwant.mp3",
 ];
 
 const imageCache = {};
