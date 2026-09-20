@@ -552,7 +552,12 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-#burger button {
+#burger {
+    font-style: normal;
+    text-decoration: none;
+}
+
+#burger-hint {
     font-style: normal;
     text-decoration: none;
 }
