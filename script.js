@@ -29,6 +29,9 @@ const imagesToPreload = [
 
     // OTHER
     "flower.png"
+    "terlalutinggi.mp3"
+    "seasons.mp3"
+    "anythingyouwant.mp3"
 ];
 
 const imageCache = {};
@@ -48,7 +51,6 @@ function preloadImage(src) {
 imagesToPreload.forEach(src => {
     preloadImage(src);
 });
-
 /* =========================
    SCENES
 ========================= */
@@ -533,17 +535,9 @@ function showFlowers() {
             "flower";
 
 
-        /* =========================
-           RANDOM POSITION
-        ========================= */
-
         const x =
             Math.random() * 100;
 
-
-        /* =========================
-           RANDOM MOVEMENT
-        ========================= */
 
         const moveX =
             (Math.random() - 0.5)
@@ -556,10 +550,6 @@ function showFlowers() {
             * window.innerHeight
             * 1.3);
 
-
-        /* =========================
-           RANDOM ROTATION
-        ========================= */
 
         const rotateStart =
             Math.random() * 60 - 30;
@@ -575,18 +565,10 @@ function showFlowers() {
                   Math.random() * 720;
 
 
-        /* =========================
-           RANDOM SPEED
-        ========================= */
-
         const duration =
             1.4 +
             Math.random() * 1.2;
 
-
-        /* =========================
-           VARIABLES
-        ========================= */
 
         flower.style.setProperty(
             "--x",
@@ -636,11 +618,6 @@ function showFlowers() {
 
     }
 
-
-    /* =========================
-       THANK YOU
-       FLOWERS STAY FOREVER
-    ========================= */
 
     setTimeout(() => {
 
@@ -707,7 +684,7 @@ yesBtn.addEventListener(
 
 
             <textarea
-                id="yesAnswer3"
+                id="yesAnswer4"
                 placeholder="askk me anything you wanttt, we'll talk about it together on WA :>"
             ></textarea>
 
@@ -746,6 +723,12 @@ yesBtn.addEventListener(
                         ).value;
 
 
+                    const answer4 =
+                        document.getElementById(
+                            "yesAnswer4"
+                        ).value;
+
+
                     const message = `
 
 What do you feel about us?
@@ -761,6 +744,11 @@ ${answer2}
 Is there anything you want me to know?
 
 ${answer3}
+
+
+Do you have any question?
+
+${answer4}
 
                     `;
 
@@ -920,17 +908,9 @@ ${answer2}
 
 /* =========================================================
    MENU CONTENT
-   =========================================================
-   
-   EDIT ONLY THIS PART
 ========================================================= */
 
 const menuPages = {
-
-
-    /* =========================
-       OUR STORY
-    ========================= */
 
     story: `
 
@@ -951,15 +931,16 @@ const menuPages = {
             </div>
 
             <div class="story-text">
+
                 <img
                     src="together2.jpeg"
                     class="memory-image"
                 >
 
-
                 <p class="memory-caption">
                     Disini aku bingung bangett tiba-tiba aku disuruh pegang cupcakenya😭. Perasaanku campurr aduk antara seneng bangett, saltingg tambah nervouss. Love this day..
                 </p>
+
             </div>
 
         </div>
@@ -972,15 +953,16 @@ const menuPages = {
             </div>
 
             <div class="story-text">
+
                 <img
                     src="together1.jpeg"
                     class="memory-image"
                 >
 
-
                 <p class="memory-caption">
-                    THISS DAYY, akuu disuruh ikut, terus disuruh buat pegang speaker doang. Awalnya oke aja, tapi setelah itu aku bingung dan nanya "kenapa harus aku?" mereka bilang gapapa. Disitu aku mulaii mikir mungkin kamuu ada perasaan ke aku, tapi setelah itu pikiran ku bilang  "ah paling cuman karena mereka tau aku suka dian" WKWKWKWK, abis itu aku disuruh ngasih hadiah nya ke kamuu hehee
+                    THISS DAYY, akuu disuruh ikut, terus disuruh buat pegang speaker doang. Awalnya oke aja, tapi setelah itu aku bingung dan nanya "kenapa harus aku?" mereka bilang gapapa. Disitu aku mulaii mikir mungkin kamuu ada perasaan ke aku, tapi setelah itu pikiran ku bilang "ah paling cuman karena mereka tau aku suka dian" WKWKWKWK, abis itu aku disuruh ngasih hadiah nya ke kamuu hehee
                 </p>
+
             </div>
 
         </div>
@@ -993,25 +975,22 @@ const menuPages = {
             </div>
 
             <div class="story-text">
+
                 <img
                     src="together3.jpeg"
                     class="memory-image"
                 >
 
-
                 <p class="memory-caption">
                     BEST ONEE, di hari ini aku udah nervous sebadan dari pagi sampe malem. Aku gugup setengah mati, tapi akhirnya aku beraniin diri pas malem. Confess pas malem emang bagian dari rencanaku karena aku ngira pulangnya bakalan jam 8/9.. TAPI TERNYATAA MALEM BANGETT (im really sorry for the BADD timing..), basically unforgettable
                 </p>
+
             </div>
 
         </div>
 
     `,
 
-
-    /* =========================
-       LITTLE THINGS
-    ========================= */
 
     little: `
 
@@ -1032,13 +1011,25 @@ const menuPages = {
             </div>
 
             <div class="little-text">
-                ♡ Aku kira kamu bakalan kayakk biasa ajaa gituuu, tapii ternyataa kamu ituu lovingg and caringgg bangettt sama aku, i love it so much <br>
-                ♡ Kamuu perhatiann bangettt oranggnyaaaaa, i loveee youuuu <br>
-                ♡ everything u doo lucuuu bangettttt, gemessss <br>
+
+                ♡ Aku kira kamu bakalan kayakk biasa ajaa gituuu, tapii ternyataa kamu ituu lovingg and caringgg bangettt sama aku, i love it so much
+
+                <br>
+
+                ♡ Kamuu perhatiann bangettt oranggnyaaaaa, i loveee youuuu
+
+                <br>
+
+                ♡ everything u doo lucuuu bangettttt, gemessss
+
+                <br>
+
                 ♡ EVERYTHINGGGGGG
+
             </div>
 
         </div>
+
 
         <div class="little-item">
 
@@ -1047,19 +1038,23 @@ const menuPages = {
             </div>
 
             <div class="little-text">
-                ♡ Aku sukaa kamu jadi diri kamu sendiriii <br>
-                ♡ Percayaa diriii <br>
+
+                ♡ Aku sukaa kamu jadi diri kamu sendiriii
+
+                <br>
+
+                ♡ Percayaa diriii
+
+                <br>
+
                 ♡ Gift from you when im about to leave tangerang.. it's so unexpected and im mad in love with you.. II MISSS UUUU
+
             </div>
 
         </div>
 
     `,
 
-
-    /* =========================
-       MEMORIES
-    ========================= */
 
     memories: `
 
@@ -1073,44 +1068,61 @@ const menuPages = {
         </p>
 
 
-        <!--
-            GANTI GAMBAR DI SINI
-        -->
+        <h4>
+            BEGINNING OF OUR STORY
+        </h4>
 
-        <h4>BEGINNING OF OUR STORY</h4>
         <img
             src="memory1.png"
             class="memory-image"
         >
+
         <p class="memory-caption">
             First chats setelah confession itu, so so so so happyyyyyy than everrr
         </p>
 
-        <h4>SPECIAL NAMES</h4>
+
+        <h4>
+            SPECIAL NAMES
+        </h4>
+
         <p class="memory-caption">
             ♡ Akuu ingett banget pertama kali kamuu panggil aku "babe" SHSHHSSSJH ituu bikin akuu tergila-gila 😭. setelah ituu gantian aku panggil kamu "sayang" karenaa aku mikir kamu udaa nyaman sama panggilan panggilan spesial diantara kita berduaaa, and every time you said it, it still made me SUUPEERRRR smileeee
         </p>
 
-        <h4>PHOTO OF YOU</h4>
+
+        <h4>
+            PHOTO OF YOU
+        </h4>
+
         <img
             src="memory4.png"
             class="memory-image"
         >
+
         <p class="memory-caption">
             Pertama kalii kamuu kirim pap.. that makes me goes crazy and reddd. literallyy makess my day evenn evennnn better when you sendd it to meee (okay. u got me. i saved all those.)
         </p>
 
-        <h4>PHOTO OF US</h4>
+
+        <h4>
+            PHOTO OF US
+        </h4>
+
         <img
             src="memory2.jpeg"
             class="memory-image"
         >
 
         <p class="memory-caption">
-            WKWKWKWKWK  YANGG INI DIPAKSAA MISSS KESAYANGAN KITAAA. guguppp bangett akuu, look how bad did i smileee 😭 (HAHAHHAA JEEREMIAH JARAKNYA JAUH BANGETT)
+            WKWKWKWKWK YANGG INI DIPAKSAA MISSS KESAYANGAN KITAAA. guguppp bangett akuu, look how bad did i smileee 😭 (HAHAHHAA JEEREMIAH JARAKNYA JAUH BANGETT)
         </p>
 
-        <h4>A GIFT</h4>
+
+        <h4>
+            A GIFT
+        </h4>
+
         <img
             src="memory3.jpeg"
             class="memory-image"
@@ -1122,10 +1134,6 @@ const menuPages = {
 
     `,
 
-
-    /* =========================
-       A FEW WORDS
-    ========================= */
 
     words: `
 
@@ -1144,21 +1152,23 @@ const menuPages = {
             Sayaanggg, akuu minta maaf yaa kalo semisalnyaa aku ada bikin kamu enggaa nyaman yang gapernah aku sadari dan kamu pendamm sendirii, akuu bakall selalu dengerin kamuu yaa sayaaangggg kalau ada yang bikin kamu engga nyamaann. Akuu enggaa mau kamuu pendemm sendiriannn, mending kitaa bicarainn baikk baikkk yaaaa.
 
             <br><br>
-            
+
             My love, my forever, my cutie patootieee. Kamuu jagaa kesehatann di sono yaaaa, jangaann telat makann muluuu, tidurr yang cukuppp, stayy confidenceee.
 
             <br><br>
 
-            Akuu bakall selaluu sayangg kamuuu, soooo don't ever think of me not loving youu okaayyy? akuu akann berusahaa pertahaninn komunikasii kitaaa mesikpunn kitaa jauhann :<<, miss u so muchhh.. 
+            Akuu bakall selaluu sayangg kamuuu, soooo don't ever think of me not loving youu okaayyy? akuu akann berusahaa pertahaninn komunikasii kitaaa mesikpunn kitaa jauhann :<<, miss u so muchhh..
 
             <br><br>
 
             Akuuu harapp kiraa langgengg yaaaa, cause my only purpose in this relationship is to be with u foreverr...
 
             <br><br>
-            
+
             I lovee loveee uuuuu ♡
+
             <br><br>
+
         </p>
 
     `
@@ -1166,9 +1176,9 @@ const menuPages = {
 };
 
 
-/* =========================
+/* =========================================================
    MENU ELEMENTS
-========================= */
+========================================================= */
 
 const menuButton =
     document.getElementById(
@@ -1211,6 +1221,306 @@ const menuBack =
     );
 
 
+/* =========================================================
+   MUSIC PLAYER
+========================================================= */
+
+const musicPlayer =
+    document.getElementById(
+        "musicPlayer"
+    );
+
+
+const audioElements =
+    document.querySelectorAll(
+        ".audio"
+    );
+
+
+const playButtons =
+    document.querySelectorAll(
+        ".music-play"
+    );
+
+
+const pauseButtons =
+    document.querySelectorAll(
+        ".music-pause"
+    );
+
+
+const progressBars =
+    document.querySelectorAll(
+        ".music-progress"
+    );
+
+
+const musicCards =
+    document.querySelectorAll(
+        ".music-card"
+    );
+
+
+/* =========================
+   FORMAT TIME
+========================= */
+
+function formatTime(seconds) {
+
+    if (
+        !Number.isFinite(seconds)
+    ) {
+
+        return "0:00";
+
+    }
+
+
+    const minutes =
+        Math.floor(
+            seconds / 60
+        );
+
+
+    const remainingSeconds =
+        Math.floor(
+            seconds % 60
+        );
+
+
+    return (
+        minutes +
+        ":" +
+        String(
+            remainingSeconds
+        ).padStart(2, "0")
+    );
+
+}
+
+
+/* =========================
+   STOP ALL OTHER SONGS
+========================= */
+
+function stopOtherSongs(
+    currentAudio
+) {
+
+    audioElements.forEach(
+        (audio) => {
+
+            if (
+                audio !==
+                currentAudio
+            ) {
+
+                audio.pause();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================
+   PLAY
+========================= */
+
+playButtons.forEach(
+    (button) => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const index =
+                    button.dataset.song;
+
+
+                const audio =
+                    document.querySelector(
+                        `.audio[data-song="${index}"]`
+                    );
+
+
+                stopOtherSongs(
+                    audio
+                );
+
+
+                audio.play();
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================
+   PAUSE
+========================= */
+
+pauseButtons.forEach(
+    (button) => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const index =
+                    button.dataset.song;
+
+
+                const audio =
+                    document.querySelector(
+                        `.audio[data-song="${index}"]`
+                    );
+
+
+                audio.pause();
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================
+   AUDIO TIME UPDATE
+========================= */
+
+audioElements.forEach(
+    (audio) => {
+
+        const index =
+            audio.dataset.song;
+
+
+        const card =
+            document.querySelector(
+                `.music-card:nth-child(${Number(index) + 1})`
+            );
+
+
+        const progress =
+            card.querySelector(
+                ".music-progress"
+            );
+
+
+        const currentTime =
+            card.querySelector(
+                ".current-time"
+            );
+
+
+        const duration =
+            card.querySelector(
+                ".duration"
+            );
+
+
+        audio.addEventListener(
+            "loadedmetadata",
+            () => {
+
+                duration.textContent =
+                    formatTime(
+                        audio.duration
+                    );
+
+            }
+        );
+
+
+        audio.addEventListener(
+            "timeupdate",
+            () => {
+
+                if (
+                    audio.duration
+                ) {
+
+                    progress.value =
+                        (
+                            audio.currentTime /
+                            audio.duration
+                        ) * 100;
+
+                }
+
+
+                currentTime.textContent =
+                    formatTime(
+                        audio.currentTime
+                    );
+
+            }
+        );
+
+
+        audio.addEventListener(
+            "ended",
+            () => {
+
+                progress.value = 0;
+
+                currentTime.textContent =
+                    "0:00";
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+progressBars.forEach(
+    (progress) => {
+
+        progress.addEventListener(
+            "input",
+            () => {
+
+                const index =
+                    progress.dataset.song;
+
+
+                const audio =
+                    document.querySelector(
+                        `.audio[data-song="${index}"]`
+                    );
+
+
+                if (
+                    audio.duration
+                ) {
+
+                    audio.currentTime =
+                        (
+                            progress.value /
+                            100
+                        ) *
+                        audio.duration;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
 /* =========================
    OPEN MENU
 ========================= */
@@ -1222,6 +1532,10 @@ function openMenu() {
     );
 
     menuOverlay.classList.add(
+        "active"
+    );
+
+    musicPlayer.classList.add(
         "active"
     );
 
@@ -1242,6 +1556,10 @@ function closeMenu() {
         "active"
     );
 
+    musicPlayer.classList.remove(
+        "active"
+    );
+
 }
 
 
@@ -1251,7 +1569,9 @@ function closeMenu() {
 
 function openMenuPage(page) {
 
-    if (page === "replay") {
+    if (
+        page === "replay"
+    ) {
 
         closeMenu();
 
@@ -1344,22 +1664,26 @@ document
     .querySelectorAll(
         ".menu-links button"
     )
-    .forEach((button) => {
+    .forEach(
+        (button) => {
 
-        button.addEventListener(
-            "click",
-            () => {
+            button.addEventListener(
+                "click",
+                () => {
 
-                const page =
-                    button.dataset.page;
+                    const page =
+                        button.dataset.page;
 
 
-                openMenuPage(page);
+                    openMenuPage(
+                        page
+                    );
 
-            }
-        );
+                }
+            );
 
-    });
+        }
+    );
 
 
 /* =========================
@@ -1379,9 +1703,9 @@ menuBack.addEventListener(
 showScene();
 
 
-/* =========================
+/* =========================================================
    FULLSCREEN GATE
-========================= */
+========================================================= */
 
 const fullscreenGate =
     document.getElementById(
@@ -1440,7 +1764,9 @@ enterFullscreen.addEventListener(
     "click",
     async () => {
 
-        if (!keyboardUnlocked) {
+        if (
+            !keyboardUnlocked
+        ) {
 
             return;
 
